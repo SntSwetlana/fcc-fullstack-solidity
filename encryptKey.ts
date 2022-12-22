@@ -6,8 +6,8 @@ async function main() {
   console.log(process.env.PRIVATE_KEY);
   const wallet1 = new ethers.Wallet(process.env.PRIVATE_KEY!);
   const encryptedJsonKey = await wallet1.encrypt(
-    process.env.PRIVATE_KEY_PASSWOR!.toString(),
-    process.env.PRIVATE_KEY
+    process.env.PRIVATE_KEY_PASSWORD!.toString(),
+    process.env.PRIVATE_KEY!
   );
   console.log(encryptedJsonKey);
 
